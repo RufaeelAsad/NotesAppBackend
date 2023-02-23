@@ -16,6 +16,14 @@ app.use(bodyParser.json());
 mongoose.connect("mongodb+srv://rufaeelasad:5D3A7zCNXzGgwUwi@cluster0.vj8rauc.mongodb.net/notesdb").then(() => {
 
 
+app.get('/', (req, res) => {
+
+    const response = { message: "THis is home Page"};
+    res.json(response);
+    
+})
+
+
 
 
 

@@ -2,7 +2,7 @@
 // Initializing
 const express = require("express");
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const mongoose = require('mongoose');
 const Note = require('./models/Node');
 const bodyParser = require("body-parser");
@@ -61,10 +61,10 @@ mongoose.connect("mongodb+srv://rufaeelasad:5D3A7zCNXzGgwUwi@cluster0.vj8rauc.mo
 
     app.post('/notes/delete', async (req, res) => {
 
-       await Note.deleteOne( {id:  req.body.id} );
+        await Note.deleteOne({ id: req.body.id });
 
-       const response = { message: "Note has been created"};
-       res.json(response);
+        const response = { message: "Note has been created" };
+        res.json(response);
 
     });
 

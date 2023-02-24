@@ -2,7 +2,7 @@
 // Initializing
 const express = require("express");
 const app = express();
-// const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 const mongoose = require('mongoose');
 const Note = require('./models/Node');
 const bodyParser = require("body-parser");
@@ -88,7 +88,7 @@ mongoose.connect("mongodb+srv://rufaeelasad:5D3A7zCNXzGgwUwi@cluster0.vj8rauc.mo
 
 
 // Starting the server on Port
-app.listen(4000, () => {
+app.listen(PORT, () => {
 
     console.log("Server run successfully");
 
